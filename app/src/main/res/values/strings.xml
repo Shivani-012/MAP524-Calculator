@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Assignment1</string>
+
+    <string name="number_1">1</string>
+    <string name="number_2">2</string>
+    <string name="number_3">3</string>
+    <string name="number_4">4</string>
+    <string name="number_5">5</string>
+    <string name="number_6">6</string>
+    <string name="number_7">7</string>
+    <string name="number_8">8</string>
+    <string name="number_9">9</string>
+    <string name="number_0">0</string>
+
+    <string name="operator_add">+</string>
+    <string name="operator_subtract">-</string>
+    <string name="operator_multiply">*</string>
+    <string name="operator_divide">/</string>
+    <string name="operator_equals">=</string>
+    <string name="operator_MAX">MAX</string>
+    <string name="operator_MIN">MIN</string>
+    <string name="operator_POW">POW</string>
+    <string name="operator_modulo">%</string>
+
+    <string name="clear_text">C</string>
+    <string name="standard_mode">STANDARD</string>
+    <string name="advance_mode">ADVANCE - SCIENTIFIC</string>
+</resources>
