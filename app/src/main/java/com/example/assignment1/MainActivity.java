@@ -111,8 +111,6 @@ public class MainActivity extends AppCompatActivity
         Button b = (Button)view;
         String buttonText = b.getText().toString();
 
-        Toast.makeText(getApplicationContext(), buttonText,Toast.LENGTH_LONG).show(); // DELETE LATER - DEBUGGING
-
         // if the clear button is clicked, clear calculator and set text to ""
         if (id == R.id.clear_btn){
             calculator.clear();
@@ -124,45 +122,34 @@ public class MainActivity extends AppCompatActivity
             // get result from calculate function
             int res = calculator.calculate();
 
+            // if error code was returned, display that the input is not an operation
             if (res == -999){
                 result_text.setText(calculator.getValues() + " = Not an Operation");
             }
+            // else display the valid result
             else {
                 result_text.setText(calculator.getValues() + " = " + res);
             }
 
-            calculator.clear();
-            /**
-
-            // check if user values were cleared (these get cleared after calculating)
-            // if not cleared, that means there is an error
-
-            // if user values are empty, calculation was successful, set text to result
-            if (calculator.isEmpty()){
-                result_text.setText(String.valueOf(res));
-            }
-            // else calculation was unsuccessful, set text to error
-            else {
-                result_text.setText(calculator.getValues());
-                calculator.clear();
-            }
-             */
+            calculator.clear(); // clear calculator
         }
 
         // if version button is clicked
         else if (id == R.id.version_btn){
 
+            // get layout holding buttons
             LinearLayout advance_layout = findViewById(R.id.advanced_buttons);
 
-            if (buttonText.equalsIgnoreCase("STANDARD")){
-                b.setText("ADVANCE - SCIENTIFIC");
+            // if current button status is standard mode, change text to advance mode and set advance_layout to gone
+            if (buttonText.equalsIgnoreCase(getString(R.string.standard_mode))){
+                b.setText(getString(R.string.advance_mode));
                 advance_layout.setVisibility(View.GONE);
             }
+            // else current status is advance mode, change text to standard mode and set advance_layout to visible
             else {
-                b.setText("STANDARD");
+                b.setText(getString(R.string.standard_mode));
                 advance_layout.setVisibility(View.VISIBLE);
             }
-
         }
 
         // else, a number or operator was clicked

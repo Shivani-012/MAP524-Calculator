@@ -178,7 +178,8 @@
 
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        >
+
+        android:visibility="gone">
 
         <Button
             android:id="@+id/operator_modulo"
@@ -214,11 +215,12 @@
         android:id="@+id/version_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/advance_mode"
         android:layout_gravity="center"
+
         style="@style/TextAppearance.AppCompat.Medium.Inverse"
-        android:backgroundTint="@color/black"
+        android:text="@string/advance_mode"
         android:textStyle="bold"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"/>
 
 </LinearLayout>
