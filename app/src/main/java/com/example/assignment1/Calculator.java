@@ -24,7 +24,8 @@ public class Calculator {
         int result = 0;
 
         // if array list is invalid (less than 3 elements), return unique error result
-        if (userValues.size() < 3){
+        // also, list being an even amount of elements means that input is invalid (for example, "3 % 2 +")
+        if (userValues.size() < 3 || userValues.size() % 2 == 0){
             return -999;
         }
 
